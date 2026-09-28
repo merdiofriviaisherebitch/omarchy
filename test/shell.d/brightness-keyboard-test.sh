@@ -26,7 +26,7 @@ STUB
 
 cat >"$stub_bin/omarchy-osd" <<'STUB'
 #!/bin/bash
-while [[ $# -gt 0 ]]; do
+while (( $# > 0 )); do
   if [[ $1 == "-p" ]]; then printf '%s\n' "$2" >>"${OSD_LOG:?}"; fi
   shift
 done
